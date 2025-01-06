@@ -4,6 +4,8 @@ const mongoose = require("mongoose")
 const env = require("dotenv")
 const route = require("./Routes/delete")
 const cors = require("cors")
+const signup = require("./Routes/Signup");
+const update = require("./Routes/Update");
 // app.use(cors());
 
 app.use(cors());
@@ -13,10 +15,11 @@ env.config()
 
 app.use(express.json())
 
-const signup = require("./Routes/Signup")
+
 
 app.use("/signup",signup) 
 app.use("/api",route)
+app.use("/update",update)
  
 main().catch((err)=>console.log(err));
 async function main(){

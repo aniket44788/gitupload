@@ -9,6 +9,7 @@ signup.post("/", async (req, res) => {
   const schema = joi.object({
     name: joi.string().required(),
     last: joi.string().required(),
+    email: joi.string().required(),
     password: joi.string().required(),
     age: joi.string().required(),
     phone: joi.string().required(),
@@ -37,6 +38,7 @@ signup.post("/", async (req, res) => {
       name: req.body.name,
       last: req.body.last,
       password: password,
+      email:req.body.email,
       age: req.body.age,
       phone: req.body.phone,
       gender: req.body.gender,

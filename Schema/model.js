@@ -24,6 +24,10 @@ const schema = mongoose.Schema({
     type: String,
     required: true,
   },
+  email: {
+    type: String,
+    required: true,
+  },
   token: {
     type : String,
     required: true
